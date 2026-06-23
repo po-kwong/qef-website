@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="香海正覺蓮社佛教普光學校 QEF 計劃介紹網站。" />
+  <title>普光 QEF 計劃</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./config.js"></script>
+  <script defer src="./assets/app.js"></script>
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="返回 QEF 計劃首頁">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="./assets/school-logo.png" alt="" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title" id="schoolNameZh">香海正覺蓮社佛教普光學校</span>
+            <span class="brand-subtitle" id="schoolNameEn">HHCKLA Buddhist Po Kwong School</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" id="siteNav" aria-label="QEF 計劃分頁"></nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-band" aria-labelledby="heroTitle">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Quality Education Fund Project</p>
+            <h1 id="heroTitle">普光 QEF 計劃</h1>
+            <p class="hero-subtitle" id="siteSubtitle">
+              以真實情境連繫課程、職場與生活，讓學生在參與中建立能力與信心。
+            </p>
+            <p class="hero-plan" id="planTitle">
+              創設實況學習場地（咖啡店），提升學生生涯規劃及職前培訓，強化獨立生活能力
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-label="QEF 計劃相片預留區">
+            <div class="visual-main">
+              <span>QEF</span>
+              <strong>實況學習場地</strong>
+            </div>
+            <div class="visual-stack">
+              <span class="visual-tile tile-warm"></span>
+              <span class="visual-tile tile-cool"></span>
+              <span class="visual-tile tile-green"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-label="計劃重點">
+        <div class="content">
+          <div class="metric-row" id="metricRow"></div>
+        </div>
+      </section>
+
+      <section class="page-band">
+        <div class="content">
+          <div class="section-tabs" id="sectionTabs" aria-label="分頁捷徑"></div>
+
+          <div class="status is-loading" id="status" role="status" aria-live="polite">
+            <strong>正在載入 QEF 計劃內容</strong>
+            <span>請稍候，正在讀取網站設定及分頁資料。</span>
+          </div>
+
+          <div class="page-view" id="pageView" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand" id="footerSchool">香海正覺蓮社佛教普光學校</p>
+          <p id="footerText">QEF 計劃公開介紹網站</p>
+        </div>
+        <p class="footer-note">資料由 Google Sheet 後台及 Apps Script read-only API 提供</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
