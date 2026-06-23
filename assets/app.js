@@ -244,30 +244,34 @@
   }
 
   function renderNav() {
-    const links = getNavSections().map(function (section) {
-      const href = makeSectionHref(section.id);
-      const activeClass = section.id === state.activeSectionId ? " is-active" : "";
-      return `<a class="nav-link${activeClass}" href="${escapeAttr(href)}" data-section-id="${escapeAttr(section.id)}">${escapeHtml(section.navTitle || section.title)}</a>`;
-    });
+    const controls = getNavSections().map(renderSectionControl);
 
-    if (els.siteNav) els.siteNav.innerHTML = links.join("");
-    if (els.sectionTabs) els.sectionTabs.innerHTML = links.join("");
+    if (els.siteNav) els.siteNav.innerHTML = controls.join("");
+    if (els.sectionTabs) els.sectionTabs.innerHTML = controls.join("");
 
-    document.querySelectorAll("[data-section-id]").forEach(function (link) {
-      link.addEventListener("click", handleSectionClick);
+    document.querySelectorAll(".site-nav [data-section-id], .section-tabs [data-section-id]").forEach(function (control) {
+      control.addEventListener("click", handleSectionClick);
     });
   }
 
-  function handleSectionClick(event) {
-    const link = event.target.closest("[data-section-id]");
-    if (!link) return;
+  function renderSectionControl(section) {
+    const isActive = section.id === state.activeSectionId;
+    const activeClass = isActive ? " is-active" : "";
+    const pressed = isActive ? "true" : "false";
+    const label = section.navTitle || section.title;
 
-    const nextId = normalizeSectionId(link.dataset.sectionId);
+    return `<button class="nav-link cue-card-nav${activeClass}" type="button" data-section-id="${escapeAttr(section.id)}" aria-pressed="${pressed}">${escapeHtml(label)}</button>`;
+  }
+
+  function handleSectionClick(event) {
+    const control = event.target.closest("[data-section-id]");
+    if (!control) return;
+
+    const nextId = normalizeSectionId(control.dataset.sectionId);
     if (!findSection(nextId)) return;
 
     event.preventDefault();
     state.activeSectionId = nextId;
-    window.history.pushState({}, "", makeSectionHref(nextId));
     renderNav();
     renderPage();
   }

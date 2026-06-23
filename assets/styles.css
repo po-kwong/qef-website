@@ -134,6 +134,7 @@ img {
 }
 
 .nav-link {
+  appearance: none;
   min-height: 38px;
   display: inline-flex;
   align-items: center;
@@ -141,9 +142,16 @@ img {
   padding: 0 13px;
   border: 1px solid transparent;
   border-radius: var(--radius);
+  background: transparent;
   color: var(--ink-soft);
+  font-family: inherit;
   font-size: 14px;
   font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
@@ -152,6 +160,11 @@ img {
   border-color: rgba(15, 118, 110, 0.20);
   color: var(--teal-dark);
   background: #eaf6f4;
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.22);
+  outline-offset: 3px;
 }
 
 .hero-band {

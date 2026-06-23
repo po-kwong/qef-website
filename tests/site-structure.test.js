@@ -55,6 +55,11 @@ assert.match(app, /showWarning/, "frontend should keep fallback content visible 
 assert.match(app, /COURSE_CONTENT_CATEGORY = "課程內容"/, "frontend should use the new course content category");
 assert.match(app, /renderCourseContentCard/, "course content should use the album-style card renderer");
 assert.match(app, /renderCourseContentDetail/, "course content should use the album-style detail renderer");
+assert.match(app, /function renderSectionControl/, "main sections should render as cue-card controls");
+assert.match(app, /<button class="nav-link/, "main section controls should be buttons, not plain links");
+assert.match(app, /type="button"/, "cue-card controls should not submit or navigate by default");
+assert.match(app, /aria-pressed="/, "cue-card controls should expose their selected state");
+assert.doesNotMatch(app, /window\.history\.pushState/, "section switching should stay on the page without changing the URL");
 assert.doesNotMatch(app, /其他部分/, "old related section label should not remain");
 assert.doesNotMatch(app, /課程範疇/, "old course category label should not remain");
 assert.match(codeGs, /QEF_Pages/);
