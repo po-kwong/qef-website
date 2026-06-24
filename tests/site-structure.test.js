@@ -26,6 +26,7 @@ assert.match(html, /<html lang="zh-Hant">/);
 assert.match(html, /assets\/styles\.css/);
 assert.match(html, /config\.js/);
 assert.match(html, /assets\/app\.js/);
+assert.match(html, /id="heroVisual"/, "hero visual should have a JS-rendered photo collage mount");
 
 assert.ok(config, "QEF_SITE_CONFIG should exist");
 assert.strictEqual(config.schoolNameZh, "香海正覺蓮社佛教普光學校");
@@ -46,12 +47,21 @@ assert.ok(
 
 assert.match(css, /@media \(max-width: 760px\)/, "mobile breakpoint should exist");
 assert.match(css, /\.photo-mosaic/, "photo mosaic styles should exist");
+assert.match(css, /\.hero-photo-collage/, "hero visual should render as a photo collage");
+assert.match(css, /\.hero-photo-main/, "hero collage should include a main featured photo");
 
 assert.match(app, /window\.QefSiteTest/, "app should expose test hooks");
 assert.match(app, /DEFAULT_JSONP_TIMEOUT_MS/, "frontend should use a named JSONP timeout");
 assert.doesNotMatch(app, /}, 20000\)/, "frontend should not hard-code a 20 second API timeout");
 assert.match(app, /buildSampleSiteData/, "frontend should be able to render sample data before live API returns");
 assert.match(app, /showWarning/, "frontend should keep fallback content visible on slow API failures");
+assert.match(app, /function renderHeroVisual/, "frontend should render hero visual from site photos");
+assert.match(app, /function getHeroVisualPhotos/, "frontend should select photos for the hero collage");
+assert.match(app, /function extractDriveId/, "frontend should accept full Google Drive image links in Sheet fields");
+assert.match(app, /searchParams\.get\("id"\)/, "frontend should extract Drive IDs from open?id links");
+assert.match(app, /heroVisual/, "frontend should cache the hero visual mount");
+assert.match(app, /hero-photo-collage/, "frontend should output hero photo collage markup");
+assert.match(app, /hero-photo-placeholder/, "hero visual should keep placeholders when photos are missing");
 assert.match(app, /COURSE_CONTENT_CATEGORY = "課程內容"/, "frontend should use the new course content category");
 assert.match(app, /renderCourseContentCard/, "course content should use the album-style card renderer");
 assert.match(app, /renderCourseContentDetail/, "course content should use the album-style detail renderer");

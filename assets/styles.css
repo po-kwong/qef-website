@@ -215,62 +215,86 @@ img {
   font-size: 17px;
 }
 
-.hero-visual {
+.hero-visual,
+.hero-photo-collage {
   min-height: 310px;
   display: grid;
   grid-template-columns: 1fr 118px;
   gap: 14px;
 }
 
-.visual-main,
-.visual-tile {
+.hero-photo-main,
+.hero-photo-thumb {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.30);
   border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 42px rgba(21, 33, 47, 0.16);
+}
+
+.hero-photo-main {
+  min-height: 310px;
+}
+
+.hero-photo-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.hero-photo-thumb {
+  min-height: 90px;
+}
+
+.hero-photo-main img,
+.hero-photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-photo-main figcaption,
+.hero-photo-thumb figcaption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: rgba(21, 33, 47, 0.64);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.hero-photo-main figcaption {
+  font-size: 18px;
+}
+
+.hero-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
     repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 12px, transparent 12px 24px);
 }
 
-.visual-main {
-  min-height: 310px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 26px;
-  box-shadow: var(--shadow);
-}
-
-.visual-main span {
+.hero-photo-placeholder span {
+  padding: 0 26px;
   color: rgba(255, 255, 255, 0.52);
   font-size: 76px;
   font-weight: 900;
   line-height: 1;
 }
 
-.visual-main strong {
-  margin-top: 12px;
+.hero-photo-placeholder figcaption {
+  position: static;
+  margin: 12px 26px 26px;
+  padding: 0;
+  background: transparent;
   font-size: 25px;
-}
-
-.visual-stack {
-  display: grid;
-  gap: 14px;
-}
-
-.visual-tile {
-  min-height: 90px;
-}
-
-.tile-warm {
-  background-color: rgba(200, 95, 77, 0.50);
-}
-
-.tile-cool {
-  background-color: rgba(37, 99, 235, 0.35);
-}
-
-.tile-green {
-  background-color: rgba(47, 133, 90, 0.45);
 }
 
 .summary-band {
@@ -907,7 +931,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .visual-stack {
+  .hero-photo-stack {
     grid-template-columns: repeat(3, 1fr);
   }
 

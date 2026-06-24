@@ -50,6 +50,7 @@
       schoolNameEn: document.getElementById("schoolNameEn"),
       siteSubtitle: document.getElementById("siteSubtitle"),
       planTitle: document.getElementById("planTitle"),
+      heroVisual: document.getElementById("heroVisual"),
       footerSchool: document.getElementById("footerSchool"),
       footerText: document.getElementById("footerText"),
       siteNav: document.getElementById("siteNav"),
@@ -170,8 +171,8 @@
           date: String(item.date || item.activityDate || item["活動日期"] || "").trim(),
           summary: String(item.summary || item["頁面摘要"] || item.description || item["相關簡介"] || "").trim().split(/\r?\n/)[0],
           body: String(item.body || item.description || item["相關簡介"] || item["詳細介紹"] || item.summary || "").trim(),
-          imageId: String(item.imageId || item.coverImageId || item["封面圖片ID"] || item["主要圖片ID"] || "").trim(),
-          folderId: String(item.folderId || item.driveFolderId || item["資料夾ID"] || item["相片資料夾ID"] || "").trim(),
+          imageId: extractDriveId(item.imageId || item.coverImageId || item["封面圖片ID"] || item["主要圖片ID"]),
+          folderId: extractDriveId(item.folderId || item.driveFolderId || item["資料夾ID"] || item["相片資料夾ID"]),
           published: parseBoolean(item.published !== undefined ? item.published : item["公開顯示"])
         };
       })
@@ -189,7 +190,7 @@
         return {
           id: String(item.id || item.photoId || item["相片代號"] || "").trim(),
           pageId: normalizeSectionId(item.pageId || item["頁面代號"]),
-          imageId: String(item.imageId || item["圖片ID"] || "").trim(),
+          imageId: extractDriveId(item.imageId || item["圖片ID"]),
           src: String(item.src || item.thumbnailUrl || "").trim(),
           caption: String(item.caption || item["圖片說明"] || "").trim(),
           order: Number(item.order || item["排序"] || 999),
@@ -240,6 +241,7 @@
     setText(els.footerText, CONFIG.footerText || "QEF 計劃公開介紹網站");
 
     renderNav();
+    renderHeroVisual();
     renderMetrics();
   }
 
@@ -289,6 +291,96 @@
         </article>
       `;
     }).join("");
+  }
+
+  function renderHeroVisual() {
+    if (!els.heroVisual) return;
+
+    const photos = getHeroVisualPhotos();
+    els.heroVisual.className = "hero-visual hero-photo-collage" + (photos.length ? "" : " is-placeholder");
+    els.heroVisual.innerHTML = photos.length ? renderHeroPhotoCollage(photos) : renderHeroPhotoPlaceholders();
+  }
+
+  function getHeroVisualPhotos() {
+    const candidates = [];
+    const seen = new Set();
+
+    getNavSections().forEach(function (section) {
+      const imageUrl = getSectionCoverUrl(section);
+      if (imageUrl) {
+        candidates.push({
+          src: imageUrl,
+          caption: section.navTitle || section.title,
+          order: section.order
+        });
+      }
+    });
+
+    state.photos.forEach(function (photo) {
+      const imageUrl = getPhotoImageUrl(photo);
+      if (imageUrl) {
+        candidates.push({
+          src: imageUrl,
+          caption: photo.caption || "QEF 計劃相片",
+          order: photo.order
+        });
+      }
+    });
+
+    return candidates.filter(function (photo) {
+      if (seen.has(photo.src)) return false;
+      seen.add(photo.src);
+      return true;
+    }).slice(0, 4);
+  }
+
+  function renderHeroPhotoCollage(photos) {
+    const mainPhoto = photos[0];
+    const thumbPhotos = photos.slice(1, 4);
+
+    return `
+      ${renderHeroPhotoTile(mainPhoto, 0, true)}
+      <div class="hero-photo-stack">
+        ${thumbPhotos.map(function (photo, index) {
+          return renderHeroPhotoTile(photo, index + 1, false);
+        }).join("")}
+      </div>
+    `;
+  }
+
+  function renderHeroPhotoTile(photo, index, isMain) {
+    const imageUrl = photo && photo.src;
+    const caption = (photo && photo.caption) || "QEF 計劃相片";
+    const tileClass = isMain ? "hero-photo-main" : "hero-photo-thumb";
+
+    if (!imageUrl) {
+      return `
+        <figure class="${tileClass} hero-photo-placeholder tone-${(index % 4) + 1}">
+          <figcaption>${escapeHtml(caption)}</figcaption>
+        </figure>
+      `;
+    }
+
+    return `
+      <figure class="${tileClass}">
+        <img src="${escapeAttr(imageUrl)}" alt="${escapeAttr(caption)}" ${isMain ? "" : "loading=\"lazy\""} />
+        <figcaption>${escapeHtml(caption)}</figcaption>
+      </figure>
+    `;
+  }
+
+  function renderHeroPhotoPlaceholders() {
+    return `
+      <figure class="hero-photo-main hero-photo-placeholder tone-1">
+        <span>QEF</span>
+        <figcaption>實況學習場地</figcaption>
+      </figure>
+      <div class="hero-photo-stack">
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-2"></figure>
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-3"></figure>
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-4"></figure>
+      </div>
+    `;
   }
 
   function renderPage() {
@@ -524,7 +616,7 @@
   }
 
   function renderPhotoTile(photo, index) {
-    const imageUrl = photo.src || driveThumbnailUrl(photo.imageId);
+    const imageUrl = getPhotoImageUrl(photo);
     const caption = photo.caption || "QEF 計劃相片";
 
     if (!imageUrl) {
@@ -544,7 +636,7 @@
   }
 
   function renderGalleryPhoto(photo, index) {
-    const imageUrl = photo.src || driveThumbnailUrl(photo.imageId);
+    const imageUrl = getPhotoImageUrl(photo);
     const caption = photo.caption || "QEF 計劃相片";
 
     if (!imageUrl) {
@@ -605,12 +697,37 @@
     if (coverFromSection) return coverFromSection;
 
     const firstPhoto = getPhotosForSection(section.id)[0];
-    return firstPhoto ? firstPhoto.src || driveThumbnailUrl(firstPhoto.imageId) : "";
+    return firstPhoto ? getPhotoImageUrl(firstPhoto) : "";
+  }
+
+  function getPhotoImageUrl(photo) {
+    if (!photo) return "";
+    return photo.src || driveThumbnailUrl(photo.imageId);
   }
 
   function driveThumbnailUrl(imageId) {
-    const id = String(imageId || "").trim();
+    const id = extractDriveId(imageId);
     return id ? "https://drive.google.com/thumbnail?id=" + encodeURIComponent(id) + "&sz=w1600" : "";
+  }
+
+  function extractDriveId(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    if (/^[A-Za-z0-9_-]{20,}$/.test(text)) return text;
+
+    try {
+      const url = new URL(text);
+      const queryId = url.searchParams.get("id");
+      if (queryId) return queryId.trim();
+
+      const pathMatch = url.pathname.match(/\/(?:file\/d|folders)\/([A-Za-z0-9_-]{20,})/);
+      if (pathMatch) return pathMatch[1];
+    } catch (error) {
+      // Plain IDs are handled above; malformed links fall through to regex recovery.
+    }
+
+    const match = text.match(/(?:id=|\/d\/|\/folders\/)([A-Za-z0-9_-]{20,})/);
+    return match ? match[1] : text;
   }
 
   function getActiveSectionId(search) {
@@ -706,6 +823,7 @@
   window.QefSiteTest = {
     buildSampleSiteData,
     driveThumbnailUrl,
+    extractDriveId,
     findSection,
     getActiveSectionId,
     getNavSections,
