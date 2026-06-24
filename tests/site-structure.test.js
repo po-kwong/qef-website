@@ -73,8 +73,21 @@ assert.match(app, /main-content-card-track/, "main content carousel should inclu
 assert.match(app, /data-main-carousel-direction/, "main content carousel should include left and right controls");
 assert.match(app, /handleMainContentSlide/, "main content carousel controls should switch sections");
 assert.match(app, /getSectionCoverUrl\(section\)/, "main content cards should use section images as backgrounds");
+assert.doesNotMatch(app, /arrangementTitle/, "home should not render the old Project Areas block");
+assert.doesNotMatch(app, /renderFeatureCard/, "old Project Areas cards should not remain");
+assert.doesNotMatch(app, /feature-grid/, "old Project Areas grid should not remain");
 assert.match(css, /\.main-content-card/, "main content cards should have dedicated styles");
 assert.match(css, /background-image:.*var\(--card-bg\)/, "main content card styles should support background images");
+assert.match(
+  css,
+  /\.course-card-media,\s*\n\.course-card-placeholder\s*\{[\s\S]*?aspect-ratio:\s*16\s*\/\s*9/,
+  "course cover frames should use one stable 16:9 ratio"
+);
+assert.match(
+  css,
+  /\.course-card-media img\s*\{[\s\S]*?display:\s*block[\s\S]*?object-fit:\s*cover/,
+  "course cover images should fill the fixed frame without stretching"
+);
 assert.match(app, /<button class="nav-link/, "main section controls should be buttons, not plain links");
 assert.match(app, /type="button"/, "cue-card controls should not submit or navigate by default");
 assert.match(app, /aria-pressed="/, "cue-card controls should expose their selected state");

@@ -403,25 +403,12 @@
   }
 
   function renderHome(section) {
-    const highlights = state.sections.filter(function (item) {
-      return item.id !== "home" && item.category !== COURSE_CONTENT_CATEGORY;
-    });
     const modules = state.sections.filter(function (item) {
       return item.category === COURSE_CONTENT_CATEGORY;
     });
 
     return `
       ${renderMainContentCarousel()}
-
-      <section class="content-section" aria-labelledby="arrangementTitle">
-        <div class="section-heading">
-          <p class="section-kicker">Project Areas</p>
-          <h2 id="arrangementTitle">計劃分頁</h2>
-        </div>
-        <div class="feature-grid">
-          ${highlights.map(renderFeatureCard).join("")}
-        </div>
-      </section>
 
       ${modules.length ? `
         <section class="content-section course-content-section" id="course-content" aria-labelledby="moduleTitle">
@@ -586,17 +573,6 @@
           ${(photos.length ? photos : [{ caption: section.title, imageId: section.imageId }]).map(renderGalleryPhoto).join("")}
         </div>
       </section>
-    `;
-  }
-
-  function renderFeatureCard(section) {
-    return `
-      <article class="feature-card">
-        <span>${escapeHtml(section.category || "QEF")}</span>
-        <h3>${escapeHtml(section.title)}</h3>
-        <p>${escapeHtml(section.summary)}</p>
-        <a href="${escapeAttr(makeSectionHref(section.id))}" data-section-id="${escapeAttr(section.id)}">查看內容</a>
-      </article>
     `;
   }
 
