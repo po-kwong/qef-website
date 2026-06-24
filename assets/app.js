@@ -355,30 +355,24 @@
 
     if (!imageUrl) {
       return `
-        <figure class="${tileClass} hero-photo-placeholder tone-${(index % 4) + 1}">
-          <figcaption>${escapeHtml(caption)}</figcaption>
-        </figure>
+        <figure class="${tileClass} hero-photo-placeholder tone-${(index % 4) + 1}" aria-hidden="true"></figure>
       `;
     }
 
     return `
       <figure class="${tileClass}">
         <img src="${escapeAttr(imageUrl)}" alt="${escapeAttr(caption)}" ${isMain ? "" : "loading=\"lazy\""} />
-        <figcaption>${escapeHtml(caption)}</figcaption>
       </figure>
     `;
   }
 
   function renderHeroPhotoPlaceholders() {
     return `
-      <figure class="hero-photo-main hero-photo-placeholder tone-1">
-        <span>QEF</span>
-        <figcaption>實況學習場地</figcaption>
-      </figure>
+      <figure class="hero-photo-main hero-photo-placeholder tone-1" aria-hidden="true"></figure>
       <div class="hero-photo-stack">
-        <figure class="hero-photo-thumb hero-photo-placeholder tone-2"></figure>
-        <figure class="hero-photo-thumb hero-photo-placeholder tone-3"></figure>
-        <figure class="hero-photo-thumb hero-photo-placeholder tone-4"></figure>
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-2" aria-hidden="true"></figure>
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-3" aria-hidden="true"></figure>
+        <figure class="hero-photo-thumb hero-photo-placeholder tone-4" aria-hidden="true"></figure>
       </div>
     `;
   }

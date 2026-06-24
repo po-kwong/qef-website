@@ -9,6 +9,13 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), "utf8");
 }
 
+function extractFunction(source, name) {
+  const start = source.indexOf(`function ${name}`);
+  assert.notStrictEqual(start, -1, `${name} should exist`);
+  const next = source.indexOf("\n  function ", start + 1);
+  return source.slice(start, next === -1 ? source.length : next);
+}
+
 function loadConfig() {
   const sandbox = { window: {} };
   vm.createContext(sandbox);
@@ -21,6 +28,8 @@ const css = read("assets/styles.css");
 const app = read("assets/app.js");
 const codeGs = read("apps-script/Code.gs");
 const config = loadConfig();
+const heroPhotoTileFunction = extractFunction(app, "renderHeroPhotoTile");
+const heroPhotoPlaceholdersFunction = extractFunction(app, "renderHeroPhotoPlaceholders");
 
 assert.match(html, /<html lang="zh-Hant">/);
 assert.match(html, /assets\/styles\.css/);
@@ -62,6 +71,25 @@ assert.match(app, /searchParams\.get\("id"\)/, "frontend should extract Drive ID
 assert.match(app, /heroVisual/, "frontend should cache the hero visual mount");
 assert.match(app, /hero-photo-collage/, "frontend should output hero photo collage markup");
 assert.match(app, /hero-photo-placeholder/, "hero visual should keep placeholders when photos are missing");
+assert.match(heroPhotoTileFunction, /<img src="\$\{escapeAttr\(imageUrl\)\}" alt="\$\{escapeAttr\(caption\)\}/, "hero photos should keep accessible alt text");
+assert.doesNotMatch(
+  heroPhotoTileFunction,
+  /<figcaption/,
+  "hero photo collage should not show visible caption labels over photos"
+);
+assert.doesNotMatch(
+  heroPhotoPlaceholdersFunction,
+  /<figcaption|<span>QEF<\/span>/,
+  "hero placeholders should stay visual-only without visible text"
+);
+assert.doesNotMatch(
+  html,
+  /id="heroVisual"[\s\S]*?<figcaption|id="heroVisual"[\s\S]*?<span>QEF<\/span>/,
+  "initial hero placeholder should not show visible labels before JavaScript loads"
+);
+assert.doesNotMatch(css, /\.hero-photo-main figcaption/, "hero photo collage caption overlay styles should not remain");
+assert.doesNotMatch(css, /\.hero-photo-thumb figcaption/, "hero thumbnail caption overlay styles should not remain");
+assert.doesNotMatch(css, /\.hero-photo-placeholder figcaption/, "hero placeholder caption styles should not remain");
 assert.match(app, /COURSE_CONTENT_CATEGORY = "課程內容"/, "frontend should use the new course content category");
 assert.match(app, /renderCourseContentCard/, "course content should use the album-style card renderer");
 assert.match(app, /renderCourseContentDetail/, "course content should use the album-style detail renderer");
@@ -78,6 +106,12 @@ assert.doesNotMatch(app, /renderFeatureCard/, "old Project Areas cards should no
 assert.doesNotMatch(app, /feature-grid/, "old Project Areas grid should not remain");
 assert.match(css, /\.main-content-card/, "main content cards should have dedicated styles");
 assert.match(css, /background-image:.*var\(--card-bg\)/, "main content card styles should support background images");
+assert.match(css, /--sky:\s*#[0-9a-f]{6}/i, "colorful theme should include a sky accent token");
+assert.match(css, /--sun:\s*#[0-9a-f]{6}/i, "colorful theme should include a sun accent token");
+assert.match(css, /--rose:\s*#[0-9a-f]{6}/i, "colorful theme should include a rose accent token");
+assert.match(css, /--violet:\s*#[0-9a-f]{6}/i, "colorful theme should include a violet accent token");
+assert.match(css, /\.hero-band\s*\{[\s\S]*linear-gradient[\s\S]*linear-gradient/, "hero should use a richer colorful background");
+assert.match(css, /\.metric-card:nth-child\(4n \+ 1\)[\s\S]*--metric-accent/, "metric cards should use rotating accent colors");
 assert.match(
   css,
   /\.course-card-media,\s*\n\.course-card-placeholder\s*\{[\s\S]*?aspect-ratio:\s*16\s*\/\s*9/,
@@ -91,6 +125,7 @@ assert.match(
 assert.match(app, /<button class="nav-link/, "main section controls should be buttons, not plain links");
 assert.match(app, /type="button"/, "cue-card controls should not submit or navigate by default");
 assert.match(app, /aria-pressed="/, "cue-card controls should expose their selected state");
+assert.match(css, /@media \(max-width: 760px\)[\s\S]*\.site-nav\s*\{[\s\S]*overflow-x:\s*auto/, "mobile top navigation should stay as horizontally scrollable cue cards");
 assert.doesNotMatch(app, /window\.history\.pushState/, "section switching should stay on the page without changing the URL");
 assert.doesNotMatch(app, /其他部分/, "old related section label should not remain");
 assert.doesNotMatch(app, /課程範疇/, "old course category label should not remain");
