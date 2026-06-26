@@ -35,6 +35,8 @@ const getPhotoImageUrlFunction = extractFunction(app, "getPhotoImageUrl");
 const makeThumbnailUrlFunction = extractFunction(codeGs, "makeThumbnailUrl_");
 const liveProbe = read("scripts/probe-live-site.js");
 const renderShellFunction = extractFunction(app, "renderShell");
+const initFunction = extractFunction(app, "init");
+const renderMainContentCardFunction = extractFunction(app, "renderMainContentCard");
 
 assert.match(html, /<html lang="zh-Hant">/);
 assert.match(html, /assets\/styles\.css/);
@@ -76,6 +78,9 @@ assert.match(app, /window\.QefSiteTest/, "app should expose test hooks");
 assert.match(app, /DEFAULT_JSONP_TIMEOUT_MS/, "frontend should use a named JSONP timeout");
 assert.doesNotMatch(app, /}, 20000\)/, "frontend should not hard-code a 20 second API timeout");
 assert.match(app, /buildSampleSiteData/, "frontend should be able to render sample data before live API returns");
+assert.match(initFunction, /const samplePreview = shouldRenderSamplePreview\(\)/, "frontend should distinguish local sample preview from live API loading");
+assert.match(app, /function shouldRenderSamplePreview/, "sample data should be a no-API preview path, not the normal live API first paint");
+assert.doesNotMatch(app, /function shouldRenderSampleWhileApiLoads/, "live API loading should not render stale sample content first");
 assert.match(app, /heroTitle: document\.getElementById\("heroTitle"\)/, "frontend should cache the hero title mount");
 assert.match(renderShellFunction, /setText\(els\.heroTitle, siteTitle\)/, "QEF_Settings site_title should update the visible hero title");
 assert.match(renderShellFunction, /state\.settings\.footer_text/, "QEF_Settings footer_text should be able to update the footer");
@@ -122,6 +127,9 @@ assert.match(app, /function renderSectionControl/, "main sections should render 
 assert.doesNotMatch(app, /function renderSectionCarousel/, "section tabs should stay as compact controls when the main content card rotates");
 assert.match(app, /function renderMainContentCarousel/, "main content area should render as a carousel");
 assert.match(app, /function renderMainContentCard/, "main content carousel should render content cards");
+assert.match(renderMainContentCardFunction, /const detailText = getDistinctSectionBody\(section\)/, "main content cards should remove duplicated summary/body text");
+assert.match(renderMainContentCardFunction, /main-content-detail/, "main content cards should style optional detail text separately");
+assert.match(app, /function getDistinctSectionBody/, "frontend should keep carousel overview copy concise");
 assert.match(app, /main-content-card-track/, "main content carousel should include a horizontal card track");
 assert.match(app, /data-main-carousel-direction/, "main content carousel should include left and right controls");
 assert.match(app, /handleMainContentSlide/, "main content carousel controls should switch sections");

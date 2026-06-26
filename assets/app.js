@@ -26,14 +26,10 @@
   function init() {
     cacheElements();
     state.activeSectionId = getActiveSectionId(window.location.search);
+    const samplePreview = shouldRenderSamplePreview();
 
-    if (shouldRenderSampleWhileApiLoads()) {
+    if (samplePreview) {
       renderSiteData(buildSampleSiteData());
-      showStatus(
-        "is-loading",
-        "正在讀取最新內容",
-        "Google 相片資料較多，可能需時約 1 分鐘；現先顯示網站預設內容。"
-      );
     } else {
       showLoading();
     }
@@ -43,8 +39,9 @@
         renderSiteData(data);
       })
       .catch(function (error) {
-        if (shouldRenderSampleWhileApiLoads()) {
-          showWarning("暫時未能連線至 Google Sheet，頁面已先顯示預設內容。稍後重新整理可再次嘗試。");
+        if (CONFIG.useSampleDataWhenApiMissing) {
+          if (!samplePreview) renderSiteData(buildSampleSiteData());
+          showWarning("暫時未能連線至 Google Sheet，頁面已改用預設內容。稍後重新整理可再次嘗試。");
         } else {
           showError(error.message || "未能載入 QEF 計劃資料。");
         }
@@ -82,8 +79,8 @@
     return Promise.reject(new Error("尚未設定 Apps Script API URL。"));
   }
 
-  function shouldRenderSampleWhileApiLoads() {
-    return Boolean(CONFIG.apiBaseUrl && CONFIG.apiBaseUrl !== PLACEHOLDER_API && CONFIG.useSampleDataWhenApiMissing);
+  function shouldRenderSamplePreview() {
+    return Boolean((!CONFIG.apiBaseUrl || CONFIG.apiBaseUrl === PLACEHOLDER_API) && CONFIG.useSampleDataWhenApiMissing);
   }
 
   function buildSampleSiteData() {
@@ -480,6 +477,7 @@
     const pressed = isActive ? "true" : "false";
     const coverUrl = getSectionCoverUrl(section, IMAGE_SIZES.card);
     const backgroundStyle = coverUrl ? ` style="--card-bg: url(&quot;${escapeAttr(coverUrl)}&quot;);"` : "";
+    const detailText = getDistinctSectionBody(section);
 
     return `
       <button class="main-content-card${activeClass}" type="button" data-section-id="${escapeAttr(section.id)}" aria-pressed="${pressed}"${backgroundStyle}>
@@ -487,11 +485,27 @@
         <span class="main-content-copy">
           <span class="section-kicker">${escapeHtml(section.category || "QEF Project")}</span>
           <strong>${escapeHtml(section.title)}</strong>
-          <span class="lead">${escapeHtml(section.summary)}</span>
-          <span>${escapeHtml(section.body)}</span>
+          ${section.summary ? `<span class="lead">${escapeHtml(section.summary)}</span>` : ""}
+          ${detailText ? `<span class="main-content-detail">${escapeHtml(detailText)}</span>` : ""}
         </span>
       </button>
     `;
+  }
+
+  function getDistinctSectionBody(section) {
+    const summary = normalizeInlineText(section && section.summary);
+    const body = normalizeInlineText(section && section.body);
+    if (!body) return "";
+    if (!summary) return body;
+    if (body === summary) return "";
+    if (body.startsWith(summary)) {
+      return body.slice(summary.length).replace(/^[\s。！？；:：,，.]+/, "").trim();
+    }
+    return body;
+  }
+
+  function normalizeInlineText(text) {
+    return String(text == null ? "" : text).replace(/\s+/g, " ").trim();
   }
 
   function bindMainContentCarousel() {

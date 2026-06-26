@@ -60,4 +60,4 @@ Spreadsheet ID：
 
 如未設定 `apiBaseUrl`，前台會使用 `config.js` 內的示例資料，方便先預覽設計。
 
-已設定 `apiBaseUrl` 時，前台會先顯示示例內容，等 Apps Script API 回傳後再換成 Google Sheet 最新內容。Apps Script 會快取 `site` payload 約 10 分鐘，相片資料夾掃描結果最多 6 小時；如剛修改相片資料夾或重新部署，可在 Apps Script 執行 `clearQefCache()` 或 `warmQefSiteCache()`。
+已設定 `apiBaseUrl` 時，前台會先顯示載入狀態，等 Apps Script API 回傳後才渲染 Google Sheet 最新內容，避免先看到預設內容或預設圖片再跳到新版。只有未設定 API 或 API 載入失敗時，才會使用 `config.js` 的示例資料作預覽或 fallback。Apps Script 會快取 `site` payload 約 10 分鐘，相片資料夾掃描結果最多 6 小時；如剛修改相片資料夾或重新部署，可在 Apps Script 執行 `clearQefCache()` 或 `warmQefSiteCache()`。

@@ -485,20 +485,26 @@ img {
 }
 
 .main-content-copy .lead {
-  display: block;
+  display: -webkit-box;
   margin: 22px 0 0;
   color: #dffaf5;
   font-size: 20px;
   font-weight: 900;
   line-height: 1.55;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
-.main-content-copy span:not(.section-kicker):not(.lead) {
-  display: block;
+.main-content-detail {
+  display: -webkit-box;
   margin-top: 22px;
   color: rgba(255, 255, 255, 0.90);
   font-size: 16px;
   line-height: 1.75;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .main-content-arrow {
@@ -995,7 +1001,7 @@ img {
     font-size: 17px;
   }
 
-  .main-content-copy span:not(.section-kicker):not(.lead) {
+  .main-content-detail {
     font-size: 15px;
   }
 
