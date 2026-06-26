@@ -38,6 +38,8 @@ const snapshotScriptPath = path.join(root, "scripts", "snapshot-qef-defaults.js"
 const snapshotScript = fs.existsSync(snapshotScriptPath) ? read("scripts/snapshot-qef-defaults.js") : "";
 const renderShellFunction = extractFunction(app, "renderShell");
 const initFunction = extractFunction(app, "init");
+const renderPageFunction = extractFunction(app, "renderPage");
+const syncPageChromeFunction = extractFunction(app, "syncPageChrome");
 const renderMainContentCardFunction = extractFunction(app, "renderMainContentCard");
 const normalizeSectionsFunction = extractFunction(app, "normalizeSections");
 const getDistinctSectionBodyFunction = extractFunction(app, "getDistinctSectionBody");
@@ -141,6 +143,10 @@ assert.doesNotMatch(css, /\.hero-photo-placeholder figcaption/, "hero placeholde
 assert.match(app, /COURSE_CONTENT_CATEGORY = "課程內容"/, "frontend should use the new course content category");
 assert.match(app, /renderCourseContentCard/, "course content should use the album-style card renderer");
 assert.match(app, /renderCourseContentDetail/, "course content should use the album-style detail renderer");
+assert.match(renderPageFunction, /syncPageChrome\(section\)/, "course detail pages should update page chrome visibility before rendering");
+assert.match(syncPageChromeFunction, /document\.body\.classList\.toggle\(\s*"is-course-detail-page"/, "frontend should mark nested course detail pages with a body class");
+assert.match(syncPageChromeFunction, /section\.category === COURSE_CONTENT_CATEGORY/, "only course content detail pages should use the compact page chrome");
+assert.match(css, /\.is-course-detail-page \.hero-band,\s*\.is-course-detail-page \.summary-band\s*\{[\s\S]*display:\s*none/, "nested course detail pages should hide the homepage hero and metrics");
 assert.match(app, /function renderSectionControl/, "main sections should render as cue-card controls");
 assert.doesNotMatch(app, /function renderSectionCarousel/, "section tabs should stay as compact controls when the main content card rotates");
 assert.match(app, /function renderMainContentCarousel/, "main content area should render as a carousel");

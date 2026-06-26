@@ -284,6 +284,11 @@ img {
     #fff;
 }
 
+.is-course-detail-page .hero-band,
+.is-course-detail-page .summary-band {
+  display: none;
+}
+
 .metric-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

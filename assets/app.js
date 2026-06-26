@@ -399,6 +399,8 @@
 
   function renderPage() {
     const section = findSection(state.activeSectionId) || findSection("home") || state.sections[0];
+    syncPageChrome(section);
+
     if (!section || !els.pageView) {
       showError("未有可顯示的 QEF 分頁。");
       return;
@@ -414,6 +416,13 @@
     els.pageView.innerHTML = section.id === "home" ? renderHome(section) : renderDetail(section);
     bindMainContentCarousel();
     alignActiveMainContentCard();
+  }
+
+  function syncPageChrome(section) {
+    document.body.classList.toggle(
+      "is-course-detail-page",
+      Boolean(section && section.category === COURSE_CONTENT_CATEGORY)
+    );
   }
 
   function renderHome(section) {

@@ -47,6 +47,8 @@ Spreadsheet ID：
 
 `QEF_Settings` 可控制頁面殼層文字，包括 `site_title`、`school_name_zh`、`school_name_en`、`site_subtitle`、`plan_title` 及 `footer_text`。首頁及各分頁主卡片的主旨段、白字解釋段均由 `QEF_Pages` 對應列的 `相關簡介` 控制：第一段為主旨段，留一行空行後的段落為白字解釋段。如要改首頁下方的指標卡，例如推行時期或受惠人數，請改 `QEF_Metrics`。
 
+`QEF_Pages` 中 `分類 = 課程內容` 的項目會在首頁課程卡片顯示；訪客按「查看相簿」進入最內層課程頁時，前台會隱藏首頁 hero 及指標卡，只顯示該課程詳情及相片記錄。
+
 `Albums` 是原有相簿資料，不應因 QEF 網站而修改。
 
 ## 部署
