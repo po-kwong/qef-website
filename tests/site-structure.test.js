@@ -34,12 +34,19 @@ const driveThumbnailUrlFunction = extractFunction(app, "driveThumbnailUrl");
 const getPhotoImageUrlFunction = extractFunction(app, "getPhotoImageUrl");
 const makeThumbnailUrlFunction = extractFunction(codeGs, "makeThumbnailUrl_");
 const liveProbe = read("scripts/probe-live-site.js");
+const renderShellFunction = extractFunction(app, "renderShell");
 
 assert.match(html, /<html lang="zh-Hant">/);
 assert.match(html, /assets\/styles\.css/);
 assert.match(html, /config\.js/);
 assert.match(html, /assets\/app\.js/);
 assert.match(html, /id="heroVisual"/, "hero visual should have a JS-rendered photo collage mount");
+assert.ok(fs.existsSync(path.join(root, "assets", "school-logo.png")), "school logo asset should exist");
+assert.match(html, /<header class="site-header">[\s\S]*class="brand"[\s\S]*assets\/school-logo\.png/, "header brand should include the school logo");
+assert.match(html, /id="schoolNameZh"/, "header brand should include the Chinese school name mount");
+assert.match(html, /id="schoolNameEn"/, "header brand should include the English school name mount");
+assert.match(html, /id="heroTitle"/, "hero title should be addressable from live settings");
+assert.match(html, /<nav class="site-nav" id="siteNav"[^>]*><\/nav>/, "top nav should stay an empty dynamic mount");
 
 assert.ok(config, "QEF_SITE_CONFIG should exist");
 assert.strictEqual(config.schoolNameZh, "香海正覺蓮社佛教普光學校");
@@ -62,11 +69,17 @@ assert.match(css, /@media \(max-width: 760px\)/, "mobile breakpoint should exist
 assert.match(css, /\.photo-mosaic/, "photo mosaic styles should exist");
 assert.match(css, /\.hero-photo-collage/, "hero visual should render as a photo collage");
 assert.match(css, /\.hero-photo-main/, "hero collage should include a main featured photo");
+assert.doesNotMatch(css, /\.site-header\s*\{\s*display:\s*none/, "header should show the logo and school names");
+assert.match(css, /\.site-header \.site-nav\s*\{[\s\S]*?display:\s*none/, "top header navigation should remain hidden");
 
 assert.match(app, /window\.QefSiteTest/, "app should expose test hooks");
 assert.match(app, /DEFAULT_JSONP_TIMEOUT_MS/, "frontend should use a named JSONP timeout");
 assert.doesNotMatch(app, /}, 20000\)/, "frontend should not hard-code a 20 second API timeout");
 assert.match(app, /buildSampleSiteData/, "frontend should be able to render sample data before live API returns");
+assert.match(app, /heroTitle: document\.getElementById\("heroTitle"\)/, "frontend should cache the hero title mount");
+assert.match(renderShellFunction, /setText\(els\.heroTitle, siteTitle\)/, "QEF_Settings site_title should update the visible hero title");
+assert.match(renderShellFunction, /state\.settings\.footer_text/, "QEF_Settings footer_text should be able to update the footer");
+assert.match(app, /state\.settings\.homepage_intro/, "QEF_Settings homepage_intro should update visible homepage content");
 assert.match(app, /showWarning/, "frontend should keep fallback content visible on slow API failures");
 assert.match(app, /function renderHeroVisual/, "frontend should render hero visual from site photos");
 assert.match(app, /function getHeroVisualPhotos/, "frontend should select photos for the hero collage");
@@ -137,7 +150,7 @@ assert.match(
 assert.match(app, /<button class="nav-link/, "main section controls should be buttons, not plain links");
 assert.match(app, /type="button"/, "cue-card controls should not submit or navigate by default");
 assert.match(app, /aria-pressed="/, "cue-card controls should expose their selected state");
-assert.match(css, /@media \(max-width: 760px\)[\s\S]*\.site-nav\s*\{[\s\S]*overflow-x:\s*auto/, "mobile top navigation should stay as horizontally scrollable cue cards");
+assert.match(css, /\.section-tabs\s*\{[\s\S]*?flex-wrap:\s*wrap/, "page-level section tabs should remain visible and responsive");
 assert.doesNotMatch(app, /window\.history\.pushState/, "section switching should stay on the page without changing the URL");
 assert.doesNotMatch(app, /其他部分/, "old related section label should not remain");
 assert.doesNotMatch(app, /課程範疇/, "old course category label should not remain");

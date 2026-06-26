@@ -58,6 +58,7 @@ The probe reads `config.js` for the Apps Script URL, then checks:
 - `?action=health` has `ok: true` and `cacheVersion`;
 - the deployed API no longer exposes the retired `QEF_Photos` contract;
 - `?action=site` returns page/photo/metric counts and response time;
+- `QEF_Settings` required keys reach the public API;
 - `light-food-prep.imageId` is present, proving `QEF_Pages.封面圖片ID` reaches the
   public API.
 

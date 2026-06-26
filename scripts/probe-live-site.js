@@ -75,11 +75,24 @@ async function main() {
   const pages = Array.isArray(site.json.pages) ? site.json.pages : [];
   const photos = Array.isArray(site.json.photos) ? site.json.photos : [];
   const metrics = Array.isArray(site.json.metrics) ? site.json.metrics : [];
+  const settings = site.json.settings && typeof site.json.settings === "object" ? site.json.settings : null;
   const lightFoodPrep = pages.find((page) => page.id === "light-food-prep");
 
   console.log(`site status=${site.status} ms=${site.elapsedMs} bytes=${site.bytes}`);
   console.log(`payload pages=${pages.length} photos=${photos.length} metrics=${metrics.length}`);
   console.log(`cacheVersion=${health.json.cacheVersion || "(missing)"}`);
+
+  if (!settings) {
+    fail("site payload is missing settings; QEF_Settings is not reaching the public API");
+  } else {
+    const requiredSettings = ["site_title", "school_name_zh", "school_name_en", "site_subtitle", "plan_title"];
+    requiredSettings.forEach((key) => {
+      if (!String(settings[key] || "").trim()) fail(`settings.${key} is empty`);
+    });
+    console.log(`settings site_title=${settings.site_title || "(missing)"}`);
+    if (!String(settings.homepage_intro || "").trim()) warn("settings.homepage_intro is empty; homepage intro will fall back to QEF_Pages home content");
+    if (!String(settings.footer_text || "").trim()) warn("settings.footer_text is empty; footer text will fall back to config.js");
+  }
 
   if (site.elapsedMs > 10000) warn("site took more than 10 seconds; run warmQefSiteCache() after deployment or Drive folder changes");
   if (!lightFoodPrep) {

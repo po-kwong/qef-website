@@ -8,6 +8,22 @@
 | `設定值` | Public value shown on the site |
 | `說明` | Internal note |
 
+Supported visible setting keys:
+
+| Key | Visible site target |
+| --- | --- |
+| `site_title` | Browser title and homepage hero H1 |
+| `school_name_zh` | Header brand and footer school name |
+| `school_name_en` | Header brand English name |
+| `site_subtitle` | Homepage hero subtitle |
+| `plan_title` | Homepage hero plan title |
+| `homepage_intro` | Homepage main introduction card |
+| `footer_text` | Footer description text |
+
+Other keys can remain in `QEF_Settings` as administrative notes or future
+configuration. If a public metric card such as the project period or beneficiary
+count needs to change, update `QEF_Metrics`.
+
 ## `QEF_Pages`
 
 | Column | Purpose |

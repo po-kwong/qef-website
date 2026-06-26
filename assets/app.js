@@ -55,6 +55,7 @@
     els = {
       schoolNameZh: document.getElementById("schoolNameZh"),
       schoolNameEn: document.getElementById("schoolNameEn"),
+      heroTitle: document.getElementById("heroTitle"),
       siteSubtitle: document.getElementById("siteSubtitle"),
       planTitle: document.getElementById("planTitle"),
       heroVisual: document.getElementById("heroVisual"),
@@ -93,7 +94,9 @@
         school_name_zh: CONFIG.schoolNameZh,
         school_name_en: CONFIG.schoolNameEn,
         site_subtitle: CONFIG.siteSubtitle,
-        plan_title: CONFIG.planTitle
+        plan_title: CONFIG.planTitle,
+        homepage_intro: "",
+        footer_text: CONFIG.footerText
       },
       pages: CONFIG.sections || [],
       photos: CONFIG.photos || [],
@@ -238,14 +241,16 @@
     const siteTitle = state.settings.site_title || CONFIG.siteTitle || "普光 QEF 計劃";
     const subtitle = state.settings.site_subtitle || CONFIG.siteSubtitle || "";
     const planTitle = state.settings.plan_title || CONFIG.planTitle || "";
+    const footerText = state.settings.footer_text || CONFIG.footerText || "QEF 計劃公開介紹網站";
 
     document.title = siteTitle;
     setText(els.schoolNameZh, schoolZh);
     setText(els.schoolNameEn, schoolEn);
+    setText(els.heroTitle, siteTitle);
     setText(els.siteSubtitle, subtitle);
     setText(els.planTitle, planTitle);
     setText(els.footerSchool, schoolZh);
-    setText(els.footerText, CONFIG.footerText || "QEF 計劃公開介紹網站");
+    setText(els.footerText, footerText);
 
     renderNav();
     renderHeroVisual();
@@ -404,12 +409,19 @@
   }
 
   function renderHome(section) {
+    const homepageIntro = String(state.settings.homepage_intro || "").trim();
+    const displaySection = homepageIntro
+      ? Object.assign({}, section, {
+        summary: homepageIntro.split(/\r?\n/)[0],
+        body: homepageIntro
+      })
+      : section;
     const modules = state.sections.filter(function (item) {
       return item.category === COURSE_CONTENT_CATEGORY;
     });
 
     return `
-      ${renderMainContentCarousel()}
+      ${renderMainContentCarousel(displaySection)}
 
       ${modules.length ? `
         <section class="content-section course-content-section" id="course-content" aria-labelledby="moduleTitle">
@@ -445,9 +457,11 @@
     `;
   }
 
-  function renderMainContentCarousel() {
+  function renderMainContentCarousel(displaySection) {
     const sections = getNavSections();
-    const cards = sections.map(renderMainContentCard).join("");
+    const cards = sections.map(function (section) {
+      return renderMainContentCard(displaySection && section.id === displaySection.id ? displaySection : section);
+    }).join("");
 
     return `
       <section class="main-content-carousel" aria-label="QEF 分頁重點展示">

@@ -44,6 +44,8 @@ Spreadsheet ID：
 
 `QEF_Pages` 現已合併頁面、課程內容及封面相片設定。`QEF_Photos` 已停用，只保留作舊資料備份，網站不再讀取。
 
+`QEF_Settings` 可控制頁面可見文字，包括 `site_title`、`school_name_zh`、`school_name_en`、`site_subtitle`、`plan_title`、`homepage_intro` 及 `footer_text`。如要改首頁下方的指標卡，例如推行時期或受惠人數，請改 `QEF_Metrics`。
+
 `Albums` 是原有相簿資料，不應因 QEF 網站而修改。
 
 ## 部署
@@ -54,7 +56,7 @@ Spreadsheet ID：
 4. 取得 `/exec` URL。
 5. 將 URL 填入 `config.js` 的 `apiBaseUrl`。
 6. 將網站推到 GitHub Pages。
-7. 部署後執行 `node scripts/probe-live-site.js`；`health` 應有 `cacheVersion`，不應再出現 `QEF_Photos`，而已填 `QEF_Pages!G 封面圖片ID` 的課程 row 應回傳 `imageId`。
+7. 部署後執行 `node scripts/probe-live-site.js`；`health` 應有 `cacheVersion`，不應再出現 `QEF_Photos`，`QEF_Settings` 必要 key 應回傳，而已填 `QEF_Pages!G 封面圖片ID` 的課程 row 應回傳 `imageId`。
 
 如未設定 `apiBaseUrl`，前台會使用 `config.js` 內的示例資料，方便先預覽設計。
 
