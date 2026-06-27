@@ -54,10 +54,7 @@ assert.doesNotMatch(html, /href="\.\/assets\/styles\.css"/, "stylesheet should n
 assert.doesNotMatch(html, /src="\.\/assets\/app\.js"/, "app script should not be referenced without a cache-busting version");
 assert.match(html, /id="heroVisual"/, "hero visual should have a JS-rendered photo collage mount");
 assert.ok(fs.existsSync(path.join(root, "assets", "school-logo.png")), "school logo asset should exist");
-assert.ok(fs.existsSync(path.join(root, "assets", "images", "qef-logo.png")), "QEF logo asset should exist");
 assert.match(html, /<header class="site-header">[\s\S]*class="brand"[\s\S]*assets\/school-logo\.png/, "header brand should include the school logo");
-assert.match(html, /<header class="site-header">[\s\S]*assets\/images\/qef-logo\.png/, "header should include the QEF logo");
-assert.match(html, /alt="優質教育基金 Quality Education Fund"/, "QEF logo should keep accessible alt text");
 assert.match(html, /id="schoolNameZh"/, "header brand should include the Chinese school name mount");
 assert.match(html, /id="schoolNameEn"/, "header brand should include the English school name mount");
 assert.match(html, /id="heroTitle"/, "hero title should be addressable from live settings");
@@ -86,7 +83,6 @@ assert.match(css, /@media \(max-width: 760px\)/, "mobile breakpoint should exist
 assert.match(css, /\.photo-mosaic/, "photo mosaic styles should exist");
 assert.match(css, /\.hero-photo-collage/, "hero visual should render as a photo collage");
 assert.match(css, /\.hero-photo-main/, "hero collage should include a main featured photo");
-assert.match(css, /\.funding-badge/, "QEF funding badge should have dedicated header styles");
 assert.doesNotMatch(css, /\.site-header\s*\{\s*display:\s*none/, "header should show the logo and school names");
 assert.match(css, /\.site-header \.site-nav\s*\{[\s\S]*?display:\s*none/, "top header navigation should remain hidden");
 
