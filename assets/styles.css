@@ -136,6 +136,24 @@ img {
   white-space: nowrap;
 }
 
+.funding-badge {
+  flex: 0 1 320px;
+  min-width: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.funding-badge img {
+  width: clamp(220px, 24vw, 320px);
+  max-width: 100%;
+  height: auto;
+  padding: 8px 10px;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(20, 33, 61, 0.08);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -919,6 +937,16 @@ img {
     align-items: flex-start;
     flex-direction: column;
     padding: 14px 0;
+  }
+
+  .funding-badge {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .funding-badge img {
+    width: min(100%, 300px);
   }
 
   .site-nav {
