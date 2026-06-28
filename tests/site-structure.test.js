@@ -32,7 +32,11 @@ const heroPhotoTileFunction = extractFunction(app, "renderHeroPhotoTile");
 const heroPhotoPlaceholdersFunction = extractFunction(app, "renderHeroPhotoPlaceholders");
 const driveThumbnailUrlFunction = extractFunction(app, "driveThumbnailUrl");
 const getPhotoImageUrlFunction = extractFunction(app, "getPhotoImageUrl");
+const stripAlbumPrefixFromCaptionFunction = extractFunction(app, "stripAlbumPrefixFromCaption");
+const renderPhotoTileFunction = extractFunction(app, "renderPhotoTile");
+const renderGalleryPhotoFunction = extractFunction(app, "renderGalleryPhoto");
 const makeThumbnailUrlFunction = extractFunction(codeGs, "makeThumbnailUrl_");
+const buildPhotoCaptionFunction = extractFunction(codeGs, "buildPhotoCaption_");
 const liveProbe = read("scripts/probe-live-site.js");
 const snapshotScriptPath = path.join(root, "scripts", "snapshot-qef-defaults.js");
 const snapshotScript = fs.existsSync(snapshotScriptPath) ? read("scripts/snapshot-qef-defaults.js") : "";
@@ -45,6 +49,16 @@ const normalizeSectionsFunction = extractFunction(app, "normalizeSections");
 const getDistinctSectionBodyFunction = extractFunction(app, "getDistinctSectionBody");
 const splitDescriptionParagraphsFunction = extractFunction(app, "splitDescriptionParagraphs");
 const getSummaryFromDescriptionFunction = extractFunction(codeGs, "getSummaryFromDescription_");
+
+function evaluateFunction(functionSource, functionName, args) {
+  const sandbox = { result: undefined };
+  vm.createContext(sandbox);
+  vm.runInContext(
+    `${functionSource}\nresult = ${functionName}(...${JSON.stringify(args)});`,
+    sandbox
+  );
+  return sandbox.result;
+}
 
 assert.match(html, /<html lang="zh-Hant">/);
 assert.match(html, /assets\/styles\.css\?v=[^"]+/, "stylesheet URL should include an asset version to bypass stale GitHub Pages/browser cache");
@@ -83,6 +97,16 @@ assert.ok(config.photos.some((photo) => photo.imageId), "fallback photos should 
 assert.ok(
   config.photos.some((photo) => photo.pageId === "light-food-prep" && photo.imageId),
   "nested course folders should have fallback photos"
+);
+const fallbackSectionTitlesById = new Map(config.sections.map((section) => [section.id, section.title]));
+const fallbackPhotoWithAlbumPrefix = config.photos.find((photo) => {
+  const title = fallbackSectionTitlesById.get(photo.pageId);
+  return title && String(photo.caption || "").startsWith(title + "：");
+});
+assert.strictEqual(
+  fallbackPhotoWithAlbumPrefix,
+  undefined,
+  "fallback photo captions should not include their album title prefix"
 );
 
 assert.match(css, /@media \(max-width: 760px\)/, "mobile breakpoint should exist");
@@ -125,6 +149,26 @@ assert.match(driveThumbnailUrlFunction, /Number\(size \|\| IMAGE_SIZES\.gallery\
 assert.doesNotMatch(driveThumbnailUrlFunction, /w1600/, "Drive thumbnail helper should not force every image to w1600");
 assert.match(getPhotoImageUrlFunction, /function getPhotoImageUrl\(photo, size\)/, "photo URL helper should accept an explicit thumbnail size");
 assert.match(getPhotoImageUrlFunction, /extractDriveId\(photo\.src\)/, "photo URL helper should resize Drive thumbnailUrl values returned by Apps Script");
+assert.strictEqual(
+  evaluateFunction(
+    stripAlbumPrefixFromCaptionFunction,
+    "stripAlbumPrefixFromCaption",
+    ["輕度課程：基礎店鋪營運：IMG_1663", "輕度課程：基礎店鋪營運"]
+  ),
+  "IMG_1663",
+  "frontend should display the photo name without the album title prefix"
+);
+assert.strictEqual(
+  evaluateFunction(
+    stripAlbumPrefixFromCaptionFunction,
+    "stripAlbumPrefixFromCaption",
+    ["團體合作：飛標", "中度課程：個人成長"]
+  ),
+  "團體合作：飛標",
+  "frontend should keep real photo names that contain their own colon"
+);
+assert.match(renderPhotoTileFunction, /getDisplayPhotoCaption\(photo\)/, "photo mosaic captions should strip album-title prefixes");
+assert.match(renderGalleryPhotoFunction, /getDisplayPhotoCaption\(photo\)/, "course gallery captions should strip album-title prefixes");
 assert.match(app, /heroVisual/, "frontend should cache the hero visual mount");
 assert.match(app, /hero-photo-collage/, "frontend should output hero photo collage markup");
 assert.match(app, /hero-photo-placeholder/, "hero visual should keep placeholders when photos are missing");
@@ -215,6 +259,15 @@ assert.match(codeGs, /DEFAULT_THUMBNAIL_SIZE = 800/, "Apps Script should return 
 assert.match(makeThumbnailUrlFunction, /function makeThumbnailUrl_\(imageId, size\)/, "Apps Script thumbnail helper should accept an explicit size");
 assert.match(makeThumbnailUrlFunction, /Number\(size \|\| DEFAULT_THUMBNAIL_SIZE\)/, "Apps Script thumbnail helper should default to the configured thumbnail size");
 assert.doesNotMatch(makeThumbnailUrlFunction, /w1600/, "Apps Script should not force every folder photo URL to w1600");
+assert.strictEqual(
+  evaluateFunction(
+    buildPhotoCaptionFunction,
+    "buildPhotoCaption_",
+    ["輕度課程：基礎店鋪營運", "IMG_1663.jpg"]
+  ),
+  "IMG_1663",
+  "Apps Script should return only the Drive photo filename as the caption"
+);
 
 assert.match(liveProbe, /cacheVersion/, "live probe should detect whether the deployed Apps Script is the current cache-versioned backend");
 assert.match(liveProbe, /deployed cacheVersion/, "live probe should warn when the deployed Apps Script cache version lags behind local Code.gs");

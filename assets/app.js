@@ -652,7 +652,7 @@
 
   function renderPhotoTile(photo, index) {
     const imageUrl = getPhotoImageUrl(photo, IMAGE_SIZES.mosaic);
-    const caption = photo.caption || "QEF 計劃相片";
+    const caption = getDisplayPhotoCaption(photo);
 
     if (!imageUrl) {
       return `
@@ -672,7 +672,7 @@
 
   function renderGalleryPhoto(photo, index) {
     const imageUrl = getPhotoImageUrl(photo, IMAGE_SIZES.gallery);
-    const caption = photo.caption || "QEF 計劃相片";
+    const caption = getDisplayPhotoCaption(photo);
 
     if (!imageUrl) {
       return `
@@ -688,6 +688,26 @@
         <figcaption>${escapeHtml(caption)}</figcaption>
       </figure>
     `;
+  }
+
+  function getDisplayPhotoCaption(photo) {
+    const section = photo && findSection(photo.pageId);
+    return stripAlbumPrefixFromCaption(photo && photo.caption, section && section.title) || "QEF 計劃相片";
+  }
+
+  function stripAlbumPrefixFromCaption(caption, albumTitle) {
+    const text = String(caption || "").trim();
+    const title = String(albumTitle || "").trim();
+    if (!text || !title) return text;
+
+    const prefixes = [title + "：", title + ":", title + " - ", title + "－"];
+    for (let index = 0; index < prefixes.length; index += 1) {
+      if (text.startsWith(prefixes[index])) {
+        return text.slice(prefixes[index].length).trim();
+      }
+    }
+
+    return text;
   }
 
   function getPhotosForSection(sectionId) {
@@ -871,7 +891,8 @@
     getNavSections,
     normalizeSectionId,
     normalizeSections,
-    parseBoolean
+    parseBoolean,
+    stripAlbumPrefixFromCaption
   };
 
   if (document.readyState === "loading") {

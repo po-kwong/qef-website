@@ -20,7 +20,7 @@ const NAV_CATEGORY_ORDER = [
 const MAX_FOLDER_PHOTOS_PER_PAGE = 12;
 const MAX_FOLDER_PHOTO_DEPTH = 3;
 const DEFAULT_THUMBNAIL_SIZE = 800;
-const CACHE_VERSION = '2026-06-26-v1';
+const CACHE_VERSION = '2026-06-28-v1';
 const SITE_CACHE_KEY = 'qef-site:' + CACHE_VERSION;
 const SITE_CACHE_TTL_SECONDS = 600;
 const FOLDER_PHOTO_CACHE_TTL_SECONDS = 21600;
@@ -366,7 +366,7 @@ function makeThumbnailUrl_(imageId, size) {
 
 function buildPhotoCaption_(pageTitle, fileName) {
   const name = String(fileName || '').replace(/\.[^.]+$/, '').trim();
-  return name ? pageTitle + '：' + name : pageTitle;
+  return name || getText_(pageTitle);
 }
 
 function sortByOrder_(a, b) {

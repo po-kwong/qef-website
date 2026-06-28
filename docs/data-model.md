@@ -56,6 +56,9 @@ frontend. If `封面圖片ID` is filled, the frontend uses that image as the car
 detail hero, and first gallery image before falling back to the first folder
 photo.
 
+Folder-photo captions use the Drive file name without its extension; the course
+or album title is not prepended to each photo caption.
+
 Folder photo scans are cached per page/folder for up to 6 hours to avoid slow
 Drive traversal on every public page load. After changing Drive folder contents,
 run `clearQefCache()` or `warmQefSiteCache()` in the Apps Script editor if the

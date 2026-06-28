@@ -339,7 +339,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1owYmwqSoHECtJ_xO8BifJthqkBP9lRQF",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1owYmwqSoHECtJ_xO8BifJthqkBP9lRQF&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：我終於成功拉花了！",
+      "caption": "我終於成功拉花了！",
       "order": 1000,
       "published": true
     },
@@ -348,7 +348,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "19Kcdhglu9XrP-4OaJQ_JcADQO5xDoWx9",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=19Kcdhglu9XrP-4OaJQ_JcADQO5xDoWx9&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：感謝教職員光顧尚cafe，讓學生順利進行餐飲業實習！",
+      "caption": "感謝教職員光顧尚cafe，讓學生順利進行餐飲業實習！",
       "order": 1001,
       "published": true
     },
@@ -357,7 +357,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "13iGhhGvdAjawOwwWEgxw8q15_1pFjQDp",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=13iGhhGvdAjawOwwWEgxw8q15_1pFjQDp&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：高水準午餐：低糖芝麻豆奶配冬蔭功大蝦意粉，令人食指大動！",
+      "caption": "高水準午餐：低糖芝麻豆奶配冬蔭功大蝦意粉，令人食指大動！",
       "order": 1002,
       "published": true
     },
@@ -366,7 +366,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1TRFSQ47kUefoZGrIDc4D0TY1KZT6csm3",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1TRFSQ47kUefoZGrIDc4D0TY1KZT6csm3&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：自家種香草，大派用場！",
+      "caption": "自家種香草，大派用場！",
       "order": 1003,
       "published": true
     },
@@ -375,7 +375,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1eXs9eZa7L3qIhpxNkQ0eJMk9INlFS2w2",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1eXs9eZa7L3qIhpxNkQ0eJMk9INlFS2w2&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：同學們專注地為嘉賓沖調咖啡飲品。",
+      "caption": "同學們專注地為嘉賓沖調咖啡飲品。",
       "order": 1004,
       "published": true
     },
@@ -384,7 +384,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1ou3Z4SfUpdRCX4cilVjX0Vi2OajepTz3",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1ou3Z4SfUpdRCX4cilVjX0Vi2OajepTz3&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：招牌焦糖凍咖啡配自家製香橙、百香果素食芝士蛋糕，令人一試難忘。",
+      "caption": "招牌焦糖凍咖啡配自家製香橙、百香果素食芝士蛋糕，令人一試難忘。",
       "order": 1005,
       "published": true
     },
@@ -393,7 +393,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1oo0QFcwsVSJrbBUD0sToObjghBwZQ1Be",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1oo0QFcwsVSJrbBUD0sToObjghBwZQ1Be&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：同學們熱烈地招待到尚cafe參觀的嘉賓。",
+      "caption": "同學們熱烈地招待到尚cafe參觀的嘉賓。",
       "order": 1006,
       "published": true
     },
@@ -402,7 +402,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1km3b2CJIOiMrK7yZC1hBpfcQReuwmycI",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1km3b2CJIOiMrK7yZC1hBpfcQReuwmycI&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：同學們專心地調製香橙tonic咖啡。",
+      "caption": "同學們專心地調製香橙tonic咖啡。",
       "order": 1007,
       "published": true
     },
@@ -411,7 +411,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1icObF7BFseBwN79oqI8NWS98wLmOslVO",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1icObF7BFseBwN79oqI8NWS98wLmOslVO&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：令人無法抗拒的早餐組合。",
+      "caption": "令人無法抗拒的早餐組合。",
       "order": 1008,
       "published": true
     },
@@ -420,7 +420,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "16UbFHfVfntiC5keUH9OL_Sload1xAbm-",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=16UbFHfVfntiC5keUH9OL_Sload1xAbm-&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：當熱呼呼的燒賣遇上冰冷的香橙tonic咖啡，味道會是如何？",
+      "caption": "當熱呼呼的燒賣遇上冰冷的香橙tonic咖啡，味道會是如何？",
       "order": 1009,
       "published": true
     },
@@ -429,7 +429,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1uougf220pvfmcb64iPwq4xSUWv70mk0k",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1uougf220pvfmcb64iPwq4xSUWv70mk0k&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：辛勤的同學們，一早已為大家預備熱呼呼的燒賣！",
+      "caption": "辛勤的同學們，一早已為大家預備熱呼呼的燒賣！",
       "order": 1010,
       "published": true
     },
@@ -438,7 +438,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-food-prep",
       "imageId": "1ZWNyzvAPI2dTXWDkDiLOyiTsQDruJSJ0",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1ZWNyzvAPI2dTXWDkDiLOyiTsQDruJSJ0&sz=w800",
-      "caption": "輕度課程：基礎餐飲製作：專業咖啡師為大家提供優質燕麥拉花咖啡！",
+      "caption": "專業咖啡師為大家提供優質燕麥拉花咖啡！",
       "order": 1011,
       "published": true
     },
@@ -447,7 +447,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1rg5juD2Iaxh6sq6tXtPpWItfp8pHNNyA",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1rg5juD2Iaxh6sq6tXtPpWItfp8pHNNyA&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (4)",
+      "caption": "餐飲接待及清潔_鈞 (4)",
       "order": 1000,
       "published": true
     },
@@ -456,7 +456,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1udM1OZPjfz_LW7lemPzAAVfGieTquOaz",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1udM1OZPjfz_LW7lemPzAAVfGieTquOaz&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (7)",
+      "caption": "餐飲接待及清潔_鈞 (7)",
       "order": 1001,
       "published": true
     },
@@ -465,7 +465,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1m7ixz7lOSrZ9uY-xlCB57EWOO53Svap_",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1m7ixz7lOSrZ9uY-xlCB57EWOO53Svap_&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (6)",
+      "caption": "餐飲接待及清潔_鈞 (6)",
       "order": 1002,
       "published": true
     },
@@ -474,7 +474,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1n4z9kkhA_NLByF9qVDnYdb0YvBy4NfEY",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1n4z9kkhA_NLByF9qVDnYdb0YvBy4NfEY&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (5)",
+      "caption": "餐飲接待及清潔_鈞 (5)",
       "order": 1003,
       "published": true
     },
@@ -483,7 +483,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1c-JgHsgouuPGugENKvEszQnlqBpbEgug",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1c-JgHsgouuPGugENKvEszQnlqBpbEgug&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (3)",
+      "caption": "餐飲接待及清潔_鈞 (3)",
       "order": 1004,
       "published": true
     },
@@ -492,7 +492,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "1MghLM0_eOp8ZqQy4D_yDpG5EWiN4YnHl",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1MghLM0_eOp8ZqQy4D_yDpG5EWiN4YnHl&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (2)",
+      "caption": "餐飲接待及清潔_鈞 (2)",
       "order": 1005,
       "published": true
     },
@@ -501,7 +501,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-catering-cleaning",
       "imageId": "114UnQW6VucAPJi5uxeOh1pCfbaD0URfX",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=114UnQW6VucAPJi5uxeOh1pCfbaD0URfX&sz=w800",
-      "caption": "輕度課程：基礎餐飲服務及清潔：餐飲接待及清潔_鈞 (1)",
+      "caption": "餐飲接待及清潔_鈞 (1)",
       "order": 1006,
       "published": true
     },
@@ -510,7 +510,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1QyatUCD3iFJdfojm_l_zasEjRN2g0MiQ",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1QyatUCD3iFJdfojm_l_zasEjRN2g0MiQ&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_1663",
+      "caption": "IMG_1663",
       "order": 1000,
       "published": true
     },
@@ -519,7 +519,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1YMF6H7WkRr5EdPDp-G1wEdcAkpQwGYdJ",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1YMF6H7WkRr5EdPDp-G1wEdcAkpQwGYdJ&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_1664",
+      "caption": "IMG_1664",
       "order": 1001,
       "published": true
     },
@@ -528,7 +528,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1i-ViI2GePpWVp1oFMmMxw-Tjr49nZjJS",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1i-ViI2GePpWVp1oFMmMxw-Tjr49nZjJS&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_7088",
+      "caption": "IMG_7088",
       "order": 1002,
       "published": true
     },
@@ -537,7 +537,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1xzlCXj4Yc4FJptEV2ft2Q0V3BqW8C29Q",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1xzlCXj4Yc4FJptEV2ft2Q0V3BqW8C29Q&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_7080",
+      "caption": "IMG_7080",
       "order": 1003,
       "published": true
     },
@@ -546,7 +546,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1DHsDgVVwEEtIO1dt0r0iPS5fwTALPBi9",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1DHsDgVVwEEtIO1dt0r0iPS5fwTALPBi9&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_7086",
+      "caption": "IMG_7086",
       "order": 1004,
       "published": true
     },
@@ -555,7 +555,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "19pZqjmT_M7WlCek4wNOCJzvtNSW-F7o9",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=19pZqjmT_M7WlCek4wNOCJzvtNSW-F7o9&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_7083",
+      "caption": "IMG_7083",
       "order": 1005,
       "published": true
     },
@@ -564,7 +564,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1wELsP8dKK9ngwRcogolkms9H00id6Kxa",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1wELsP8dKK9ngwRcogolkms9H00id6Kxa&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_7079",
+      "caption": "IMG_7079",
       "order": 1006,
       "published": true
     },
@@ -573,7 +573,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-shop-operation",
       "imageId": "1IUjI5W2vHLhu16iKrapPrljfZdoBnuZZ",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1IUjI5W2vHLhu16iKrapPrljfZdoBnuZZ&sz=w800",
-      "caption": "輕度課程：基礎店鋪營運：IMG_6087",
+      "caption": "IMG_6087",
       "order": 1007,
       "published": true
     },
@@ -582,7 +582,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-workplace-life",
       "imageId": "1ZJaF70xgDIv3PUSixW7Ja3m7EOWVMqKn",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1ZJaF70xgDIv3PUSixW7Ja3m7EOWVMqKn&sz=w800",
-      "caption": "輕度課程：職場生活：職場生活_鈞 (4)",
+      "caption": "職場生活_鈞 (4)",
       "order": 1000,
       "published": true
     },
@@ -591,7 +591,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-workplace-life",
       "imageId": "1xaP4qcqa0b0liVJI55FNWj-PsyglOf7x",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1xaP4qcqa0b0liVJI55FNWj-PsyglOf7x&sz=w800",
-      "caption": "輕度課程：職場生活：職場生活_鈞 (5)",
+      "caption": "職場生活_鈞 (5)",
       "order": 1001,
       "published": true
     },
@@ -600,7 +600,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-workplace-life",
       "imageId": "10QBfuYZBPU1a6Epc85rcgSB6nLwYMt9E",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=10QBfuYZBPU1a6Epc85rcgSB6nLwYMt9E&sz=w800",
-      "caption": "輕度課程：職場生活：職場生活_鈞 (3)",
+      "caption": "職場生活_鈞 (3)",
       "order": 1002,
       "published": true
     },
@@ -609,7 +609,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-workplace-life",
       "imageId": "1tE8nbsesRMUsEewP2h2lnLdNWg4C0KOW",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1tE8nbsesRMUsEewP2h2lnLdNWg4C0KOW&sz=w800",
-      "caption": "輕度課程：職場生活：職場生活_鈞 (2)",
+      "caption": "職場生活_鈞 (2)",
       "order": 1003,
       "published": true
     },
@@ -618,7 +618,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-workplace-life",
       "imageId": "1Y2WQ93PDjpKMlBwe0Qed_mnt8qhDFXwy",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1Y2WQ93PDjpKMlBwe0Qed_mnt8qhDFXwy&sz=w800",
-      "caption": "輕度課程：職場生活：職場生活_鈞 (1)",
+      "caption": "職場生活_鈞 (1)",
       "order": 1004,
       "published": true
     },
@@ -627,7 +627,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-art-development",
       "imageId": "1HxpqnSEmcsdpswz2PSewLsFKJQywq_7L",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1HxpqnSEmcsdpswz2PSewLsFKJQywq_7L&sz=w800",
-      "caption": "輕度課程：藝術發展：IMG_8278",
+      "caption": "IMG_8278",
       "order": 1000,
       "published": true
     },
@@ -636,7 +636,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-art-development",
       "imageId": "1hvDBpFsYwJ8t6ou0p-e7rR5xi0D9TXZe",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1hvDBpFsYwJ8t6ou0p-e7rR5xi0D9TXZe&sz=w800",
-      "caption": "輕度課程：藝術發展：IMG_8281",
+      "caption": "IMG_8281",
       "order": 1001,
       "published": true
     },
@@ -645,7 +645,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-community-exploration",
       "imageId": "1GmGfaU9qwgJgaiclHYWHYH-oUrxHGj2z",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1GmGfaU9qwgJgaiclHYWHYH-oUrxHGj2z&sz=w800",
-      "caption": "輕度課程：社區探索：學生享用西餐，大家都有注意餐飲禮儀，值得欣賞",
+      "caption": "學生享用西餐，大家都有注意餐飲禮儀，值得欣賞",
       "order": 1000,
       "published": true
     },
@@ -654,7 +654,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-community-exploration",
       "imageId": "1Tq0aIieS3aXkgrVJYmXTRDEXAWacRRez",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1Tq0aIieS3aXkgrVJYmXTRDEXAWacRRez&sz=w800",
-      "caption": "輕度課程：社區探索：學生嘗試餐後自行返還餐具到店家指定收集處",
+      "caption": "學生嘗試餐後自行返還餐具到店家指定收集處",
       "order": 1001,
       "published": true
     },
@@ -663,7 +663,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-community-exploration",
       "imageId": "18GHsJo-7qhkkS9h3BW7izW-ozbSqyjjV",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=18GHsJo-7qhkkS9h3BW7izW-ozbSqyjjV&sz=w800",
-      "caption": "輕度課程：社區探索：學生們學習使用汽水機",
+      "caption": "學生們學習使用汽水機",
       "order": 1002,
       "published": true
     },
@@ -672,7 +672,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1cxPwiEhYH3-RZHU1o88_vmODioUn5rgI",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1cxPwiEhYH3-RZHU1o88_vmODioUn5rgI&sz=w800",
-      "caption": "輕度課程：工作體驗：學生們正專心製作洗髮皂，它是義賣時的重要產品",
+      "caption": "學生們正專心製作洗髮皂，它是義賣時的重要產品",
       "order": 1000,
       "published": true
     },
@@ -681,7 +681,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1weD-SuN123TB8mx_voQp_vH5uSNswjDC",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1weD-SuN123TB8mx_voQp_vH5uSNswjDC&sz=w800",
-      "caption": "輕度課程：工作體驗：在職員用心教導下，學生學習如何裝飾咖啡",
+      "caption": "在職員用心教導下，學生學習如何裝飾咖啡",
       "order": 1001,
       "published": true
     },
@@ -690,7 +690,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1bGEPhI4vVqPt_LudaBGYX0EQoAWANKvu",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1bGEPhI4vVqPt_LudaBGYX0EQoAWANKvu&sz=w800",
-      "caption": "輕度課程：工作體驗：學生專心地清潔奶壺，一點也不偷懶",
+      "caption": "學生專心地清潔奶壺，一點也不偷懶",
       "order": 1002,
       "published": true
     },
@@ -699,7 +699,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1dU1jgmIKlPkJdtbpR7G4J7C2ZGdGH63m",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1dU1jgmIKlPkJdtbpR7G4J7C2ZGdGH63m&sz=w800",
-      "caption": "輕度課程：工作體驗：學生們到葵涌一間咖啡店進行實習",
+      "caption": "學生們到葵涌一間咖啡店進行實習",
       "order": 1003,
       "published": true
     },
@@ -708,7 +708,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1kIjPPmcctIKDXKJRRop2MLxLpuhkilYl",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1kIjPPmcctIKDXKJRRop2MLxLpuhkilYl&sz=w800",
-      "caption": "輕度課程：工作體驗：共融市集@愉景新城_學生向外界推廣自己設計的產品",
+      "caption": "共融市集@愉景新城_學生向外界推廣自己設計的產品",
       "order": 1004,
       "published": true
     },
@@ -717,7 +717,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1tycn5HO_Xgr4UtxyVM_WnxrjB4BY3Mvd",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1tycn5HO_Xgr4UtxyVM_WnxrjB4BY3Mvd&sz=w800",
-      "caption": "輕度課程：工作體驗：DSC01000",
+      "caption": "DSC01000",
       "order": 1005,
       "published": true
     },
@@ -726,7 +726,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1jZmBSLRu0-RmjtwjiU3KnbeNLcZQi89_",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1jZmBSLRu0-RmjtwjiU3KnbeNLcZQi89_&sz=w800",
-      "caption": "輕度課程：工作體驗：第四屆潮州節@會展，學生們義賣自家製產品，學習管理攤位及招待客人，",
+      "caption": "第四屆潮州節@會展，學生們義賣自家製產品，學習管理攤位及招待客人，",
       "order": 1006,
       "published": true
     },
@@ -735,7 +735,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "10PycSL_zoUDVYG5Mc7ee-HNteL_TNtkL",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=10PycSL_zoUDVYG5Mc7ee-HNteL_TNtkL&sz=w800",
-      "caption": "輕度課程：工作體驗：IMG_5154",
+      "caption": "IMG_5154",
       "order": 1007,
       "published": true
     },
@@ -744,7 +744,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1l8VZXj_ifidjErEB2gJLRbWnDPmQPdNv",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1l8VZXj_ifidjErEB2gJLRbWnDPmQPdNv&sz=w800",
-      "caption": "輕度課程：工作體驗：IMG_5092",
+      "caption": "IMG_5092",
       "order": 1008,
       "published": true
     },
@@ -753,7 +753,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1sscgz1N9nbxrjwJrWpZ41V5T8HzXj-he",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1sscgz1N9nbxrjwJrWpZ41V5T8HzXj-he&sz=w800",
-      "caption": "輕度課程：工作體驗：開店前爭取時間理貨",
+      "caption": "開店前爭取時間理貨",
       "order": 1009,
       "published": true
     },
@@ -762,7 +762,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1NFWpTgq8REWpVc9EeOYcr6qHwCz6IzxP",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1NFWpTgq8REWpVc9EeOYcr6qHwCz6IzxP&sz=w800",
-      "caption": "輕度課程：工作體驗：專心聆聽負責人講解店務員職責",
+      "caption": "專心聆聽負責人講解店務員職責",
       "order": 1010,
       "published": true
     },
@@ -771,7 +771,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "light-work-experience",
       "imageId": "1xJsTcO9mOn5Xz_ruazNXBVEUXDAGy7H-",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1xJsTcO9mOn5Xz_ruazNXBVEUXDAGy7H-&sz=w800",
-      "caption": "輕度課程：工作體驗：向客人介紹自家製品",
+      "caption": "向客人介紹自家製品",
       "order": 1011,
       "published": true
     },
@@ -780,7 +780,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1n_Ja1oCZAAjonUoAcktP4U1IqUimQCsd",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1n_Ja1oCZAAjonUoAcktP4U1IqUimQCsd&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (9)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (9)",
       "order": 1000,
       "published": true
     },
@@ -789,7 +789,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1p50zAJ7jnEX1JgpFb-CZhdc1yF5SJ-d5",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1p50zAJ7jnEX1JgpFb-CZhdc1yF5SJ-d5&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (8)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (8)",
       "order": 1001,
       "published": true
     },
@@ -798,7 +798,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1TnyFg1makhWqHey3OQOTCj_CFCcMtfmM",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1TnyFg1makhWqHey3OQOTCj_CFCcMtfmM&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (7)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (7)",
       "order": 1002,
       "published": true
     },
@@ -807,7 +807,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1_RhRTjehcM2TSQY7KhQujvOEtEAbrwaf",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1_RhRTjehcM2TSQY7KhQujvOEtEAbrwaf&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (6)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (6)",
       "order": 1003,
       "published": true
     },
@@ -816,7 +816,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "11rPgCYGWTNeHTbGYJQ6xynteIwN5VR2f",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=11rPgCYGWTNeHTbGYJQ6xynteIwN5VR2f&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (5)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (5)",
       "order": 1004,
       "published": true
     },
@@ -825,7 +825,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1sOcaDDfYdL2HIStRdNzXCOGOoxwDX2Xw",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1sOcaDDfYdL2HIStRdNzXCOGOoxwDX2Xw&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (4)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (4)",
       "order": 1005,
       "published": true
     },
@@ -834,7 +834,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1RcSYzMeJ77vWhL6VLSM749YSL6A34hYI",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1RcSYzMeJ77vWhL6VLSM749YSL6A34hYI&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (3)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (3)",
       "order": 1006,
       "published": true
     },
@@ -843,7 +843,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-cleaning",
       "imageId": "1nzkyCH_A-A6H4XYhAxYTMLoVQ32r2caK",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1nzkyCH_A-A6H4XYhAxYTMLoVQ32r2caK&sz=w800",
-      "caption": "中度課程：清潔訓練：於CAFÉ午膳營運期間帶學生實習洗碗 (1)",
+      "caption": "於CAFÉ午膳營運期間帶學生實習洗碗 (1)",
       "order": 1007,
       "published": true
     },
@@ -852,7 +852,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1a7i3wb-PikERII9OJQya9Z2aKI8FU1Id",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1a7i3wb-PikERII9OJQya9Z2aKI8FU1Id&sz=w800",
-      "caption": "中度課程：種植訓練：尚cafe裝飾植物 (2)",
+      "caption": "尚cafe裝飾植物 (2)",
       "order": 1000,
       "published": true
     },
@@ -861,7 +861,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1wpT9cDsdVSL3AtvNr_Cv6KJkFAOaIplE",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1wpT9cDsdVSL3AtvNr_Cv6KJkFAOaIplE&sz=w800",
-      "caption": "中度課程：種植訓練：尚cafe裝飾植物",
+      "caption": "尚cafe裝飾植物",
       "order": 1001,
       "published": true
     },
@@ -870,7 +870,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1KvjS-jC_YYLKJ6vosVrFsI4dN_DHtZpY",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1KvjS-jC_YYLKJ6vosVrFsI4dN_DHtZpY&sz=w800",
-      "caption": "中度課程：種植訓練：種植成果 (2)",
+      "caption": "種植成果 (2)",
       "order": 1002,
       "published": true
     },
@@ -879,7 +879,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1LMktGBbVejx0YMxcphAyTlW7IbVqk-x2",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1LMktGBbVejx0YMxcphAyTlW7IbVqk-x2&sz=w800",
-      "caption": "中度課程：種植訓練：種植成果",
+      "caption": "種植成果",
       "order": 1003,
       "published": true
     },
@@ -888,7 +888,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "15QQaWF_WDQlOu0RHAMaafNhwnOVJP9Qg",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=15QQaWF_WDQlOu0RHAMaafNhwnOVJP9Qg&sz=w800",
-      "caption": "中度課程：種植訓練：養護食用花 (2)",
+      "caption": "養護食用花 (2)",
       "order": 1004,
       "published": true
     },
@@ -897,7 +897,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1dXlVvswg7baonRq9ef7Sc8Cei7_tlSis",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1dXlVvswg7baonRq9ef7Sc8Cei7_tlSis&sz=w800",
-      "caption": "中度課程：種植訓練：養護食用花",
+      "caption": "養護食用花",
       "order": 1005,
       "published": true
     },
@@ -906,7 +906,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1Hv2BJgelAjqhDb4YSXwVylmxWG1ra5o3",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1Hv2BJgelAjqhDb4YSXwVylmxWG1ra5o3&sz=w800",
-      "caption": "中度課程：種植訓練：種植食用花 (2)",
+      "caption": "種植食用花 (2)",
       "order": 1006,
       "published": true
     },
@@ -915,7 +915,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1GxqMROUqswJcKTchl3YdWOHjjvEUvR-B",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1GxqMROUqswJcKTchl3YdWOHjjvEUvR-B&sz=w800",
-      "caption": "中度課程：種植訓練：採收食用花 (2)",
+      "caption": "採收食用花 (2)",
       "order": 1007,
       "published": true
     },
@@ -924,7 +924,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1sSObT7jIj8RJpOgBtir3GdVe5hVcw0HC",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1sSObT7jIj8RJpOgBtir3GdVe5hVcw0HC&sz=w800",
-      "caption": "中度課程：種植訓練：採收食用花",
+      "caption": "採收食用花",
       "order": 1008,
       "published": true
     },
@@ -933,7 +933,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "18_l9wAkTvd2zWuX970K-H3_L-1aXSzIi",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=18_l9wAkTvd2zWuX970K-H3_L-1aXSzIi&sz=w800",
-      "caption": "中度課程：種植訓練：IMG_0695",
+      "caption": "IMG_0695",
       "order": 1009,
       "published": true
     },
@@ -942,7 +942,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "19A8BmQM-drAks8fRvQ-sblhJCjulcSpO",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=19A8BmQM-drAks8fRvQ-sblhJCjulcSpO&sz=w800",
-      "caption": "中度課程：種植訓練：IMG_0492",
+      "caption": "IMG_0492",
       "order": 1010,
       "published": true
     },
@@ -951,7 +951,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-planting",
       "imageId": "1zzrO3WPWXwOvwyVgsH820G8NwaR7eu_b",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1zzrO3WPWXwOvwyVgsH820G8NwaR7eu_b&sz=w800",
-      "caption": "中度課程：種植訓練：IMG_0741",
+      "caption": "IMG_0741",
       "order": 1011,
       "published": true
     },
@@ -960,7 +960,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "14fnL_Kq5mhZEa3BQD2-nQykkwAeRWirr",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=14fnL_Kq5mhZEa3BQD2-nQykkwAeRWirr&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_8241",
+      "caption": "IMG_8241",
       "order": 1000,
       "published": true
     },
@@ -969,7 +969,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "15376X3qFuVehghIoaoAnBxj0uMKaC9dc",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=15376X3qFuVehghIoaoAnBxj0uMKaC9dc&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_9582",
+      "caption": "IMG_9582",
       "order": 1001,
       "published": true
     },
@@ -978,7 +978,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "1w9mmGkcNlt7OpaObzJuL4DrpyiuHzOHP",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1w9mmGkcNlt7OpaObzJuL4DrpyiuHzOHP&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_5585",
+      "caption": "IMG_5585",
       "order": 1002,
       "published": true
     },
@@ -987,7 +987,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "1fcBVN-GtorhdUPTZ5B2WA_dJiEneXCLl",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1fcBVN-GtorhdUPTZ5B2WA_dJiEneXCLl&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_5577",
+      "caption": "IMG_5577",
       "order": 1003,
       "published": true
     },
@@ -996,7 +996,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "1DpxCXi2AHR33vuMDhy3P5_GmIAKsMaCL",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1DpxCXi2AHR33vuMDhy3P5_GmIAKsMaCL&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_5231",
+      "caption": "IMG_5231",
       "order": 1004,
       "published": true
     },
@@ -1005,7 +1005,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-art-development",
       "imageId": "1mIiNwaLdxhJIDfzpDZ6kIIGHiLj4PvCy",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1mIiNwaLdxhJIDfzpDZ6kIIGHiLj4PvCy&sz=w800",
-      "caption": "中度課程：藝術發展：IMG_5230",
+      "caption": "IMG_5230",
       "order": 1005,
       "published": true
     },
@@ -1014,7 +1014,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-community-exploration",
       "imageId": "1nLrZBj-90l_P2nw3Yk9N3VGlHKFlCELN",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1nLrZBj-90l_P2nw3Yk9N3VGlHKFlCELN&sz=w800",
-      "caption": "中度課程：社區探索：IMG_8524",
+      "caption": "IMG_8524",
       "order": 1000,
       "published": true
     },
@@ -1023,7 +1023,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-community-exploration",
       "imageId": "18ae15PmIINSJFqdJdE3fmPO8uAG1USJe",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=18ae15PmIINSJFqdJdE3fmPO8uAG1USJe&sz=w800",
-      "caption": "中度課程：社區探索：IMG_6307",
+      "caption": "IMG_6307",
       "order": 1001,
       "published": true
     },
@@ -1032,7 +1032,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-community-exploration",
       "imageId": "1j1_MJcZhFGYceQ9-tVXur9cQDweyZF2R",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1j1_MJcZhFGYceQ9-tVXur9cQDweyZF2R&sz=w800",
-      "caption": "中度課程：社區探索：IMG_6306",
+      "caption": "IMG_6306",
       "order": 1002,
       "published": true
     },
@@ -1041,7 +1041,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-community-exploration",
       "imageId": "1cak3XG4P7uzpv3uuFit9imYoY8PlWCmS",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1cak3XG4P7uzpv3uuFit9imYoY8PlWCmS&sz=w800",
-      "caption": "中度課程：社區探索：IMG_6292",
+      "caption": "IMG_6292",
       "order": 1003,
       "published": true
     },
@@ -1050,7 +1050,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-community-exploration",
       "imageId": "1PLMqMmFvEaSjoVIl6m6nN8RRqFY-sfFD",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1PLMqMmFvEaSjoVIl6m6nN8RRqFY-sfFD&sz=w800",
-      "caption": "中度課程：社區探索：IMG_6273",
+      "caption": "IMG_6273",
       "order": 1004,
       "published": true
     },
@@ -1059,7 +1059,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1DYqWoaHHuVtIkU7VgqiH-6Ki19m7l-NE",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1DYqWoaHHuVtIkU7VgqiH-6Ki19m7l-NE&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (11)",
+      "caption": "學生於個人成長課學習製作三文治 (11)",
       "order": 1000,
       "published": true
     },
@@ -1068,7 +1068,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1SdOLdnMSeUZiTG-tyAx2MQ-2Wip7S8zB",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1SdOLdnMSeUZiTG-tyAx2MQ-2Wip7S8zB&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (9)",
+      "caption": "學生於個人成長課學習製作三文治 (9)",
       "order": 1001,
       "published": true
     },
@@ -1077,7 +1077,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1cRgCV13cSoR8ZPR9i79wptAeJBSZHds2",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1cRgCV13cSoR8ZPR9i79wptAeJBSZHds2&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (10)",
+      "caption": "學生於個人成長課學習製作三文治 (10)",
       "order": 1002,
       "published": true
     },
@@ -1086,7 +1086,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1T0Ol0sHOO3Wc-d8VTfSair3PruXVARF5",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1T0Ol0sHOO3Wc-d8VTfSair3PruXVARF5&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (8)",
+      "caption": "學生於個人成長課學習製作三文治 (8)",
       "order": 1003,
       "published": true
     },
@@ -1095,7 +1095,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "11GFW3gdoK5Oz2dFSzJfgExAxvuV9Ie56",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=11GFW3gdoK5Oz2dFSzJfgExAxvuV9Ie56&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作吞拿魚餅乾",
+      "caption": "學生於個人成長課學習製作吞拿魚餅乾",
       "order": 1004,
       "published": true
     },
@@ -1104,7 +1104,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1jW03ZPzbkLhvmR5D-5HUypR_5UpKT0Y7",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1jW03ZPzbkLhvmR5D-5HUypR_5UpKT0Y7&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (7)",
+      "caption": "學生於個人成長課學習製作三文治 (7)",
       "order": 1005,
       "published": true
     },
@@ -1113,7 +1113,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1yoG1ywsmk0io7-gSbWncwYFWgHLhlWLi",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1yoG1ywsmk0io7-gSbWncwYFWgHLhlWLi&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (6)",
+      "caption": "學生於個人成長課學習製作三文治 (6)",
       "order": 1006,
       "published": true
     },
@@ -1122,7 +1122,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1CTEwGQxGz-GBDL4PDYZKLlJbf9aqOMf7",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1CTEwGQxGz-GBDL4PDYZKLlJbf9aqOMf7&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (2)",
+      "caption": "學生於個人成長課學習製作三文治 (2)",
       "order": 1007,
       "published": true
     },
@@ -1131,7 +1131,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1YnXriPOeYn5pZemUj_8kGlz4ve4YFS6o",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1YnXriPOeYn5pZemUj_8kGlz4ve4YFS6o&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (1)",
+      "caption": "學生於個人成長課學習製作三文治 (1)",
       "order": 1008,
       "published": true
     },
@@ -1140,7 +1140,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1GQg7ujZThY3vl8f2Fz-wn6zLah25C2Qf",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1GQg7ujZThY3vl8f2Fz-wn6zLah25C2Qf&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (5)",
+      "caption": "學生於個人成長課學習製作三文治 (5)",
       "order": 1009,
       "published": true
     },
@@ -1149,7 +1149,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "180G_VlSlRgYxTcSXEBUIQQJCfQ0q82NA",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=180G_VlSlRgYxTcSXEBUIQQJCfQ0q82NA&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (4)",
+      "caption": "學生於個人成長課學習製作三文治 (4)",
       "order": 1010,
       "published": true
     },
@@ -1158,7 +1158,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-independent-living",
       "imageId": "1JsqYa1UwxiZPIMVROoH0whTHNvB-jz4c",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1JsqYa1UwxiZPIMVROoH0whTHNvB-jz4c&sz=w800",
-      "caption": "中度課程：獨立生活：學生於個人成長課學習製作三文治 (3)",
+      "caption": "學生於個人成長課學習製作三文治 (3)",
       "order": 1011,
       "published": true
     },
@@ -1167,7 +1167,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-work-experience",
       "imageId": "1Ns-Yoz1VL-KLu1ye6iJfYxh2gmVUzFfG",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1Ns-Yoz1VL-KLu1ye6iJfYxh2gmVUzFfG&sz=w800",
-      "caption": "中度課程：工作體驗：學生在本校宿舍職員指導下進行清潔宿舍工作",
+      "caption": "學生在本校宿舍職員指導下進行清潔宿舍工作",
       "order": 1000,
       "published": true
     },
@@ -1176,7 +1176,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-work-experience",
       "imageId": "1tfBQyrzS-QIhMKsISf3JyFUkVffb-osG",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1tfBQyrzS-QIhMKsISf3JyFUkVffb-osG&sz=w800",
-      "caption": "中度課程：工作體驗：學生正進行「旅行衛生包」包裝工作訓練",
+      "caption": "學生正進行「旅行衛生包」包裝工作訓練",
       "order": 1001,
       "published": true
     },
@@ -1185,7 +1185,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-work-experience",
       "imageId": "1ukT8NI9lBNOHxVJye0cSOIrG0OljgnnR",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1ukT8NI9lBNOHxVJye0cSOIrG0OljgnnR&sz=w800",
-      "caption": "中度課程：工作體驗：學生在友校樂進學校教職員指導下進行分配午膳的工作",
+      "caption": "學生在友校樂進學校教職員指導下進行分配午膳的工作",
       "order": 1002,
       "published": true
     },
@@ -1194,7 +1194,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1nQcLCOzr1Y9ojy5SsjXEHd-vUSBZ29oM",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1nQcLCOzr1Y9ojy5SsjXEHd-vUSBZ29oM&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：飛標",
+      "caption": "團體合作：飛標",
       "order": 1000,
       "published": true
     },
@@ -1203,7 +1203,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1nrdKKjN3obCk0SaEnuDqe8r4E576wD4z",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1nrdKKjN3obCk0SaEnuDqe8r4E576wD4z&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：運球",
+      "caption": "團體合作：運球",
       "order": 1001,
       "published": true
     },
@@ -1212,7 +1212,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1d4QGgVf8pGPGFLe1HF7qIb9jQGxFgjGM",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1d4QGgVf8pGPGFLe1HF7qIb9jQGxFgjGM&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：飛標 (1)",
+      "caption": "團體合作：飛標 (1)",
       "order": 1002,
       "published": true
     },
@@ -1221,7 +1221,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1AitKj7jTn_py7QKugafP1xnmHZ1M2idW",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1AitKj7jTn_py7QKugafP1xnmHZ1M2idW&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：互相傳球",
+      "caption": "團體合作：互相傳球",
       "order": 1003,
       "published": true
     },
@@ -1230,7 +1230,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1Tr7Yhz6STfJKUgNyOlXzFg5HZt95H3VI",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1Tr7Yhz6STfJKUgNyOlXzFg5HZt95H3VI&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：齊心協力",
+      "caption": "團體合作：齊心協力",
       "order": 1004,
       "published": true
     },
@@ -1239,7 +1239,7 @@ window.QEF_SITE_CONFIG = {
       "pageId": "moderate-personal-growth",
       "imageId": "1hyFtbQrnly6_ixEg-qQvRMwJR1ttrSWG",
       "thumbnailUrl": "https://drive.google.com/thumbnail?id=1hyFtbQrnly6_ixEg-qQvRMwJR1ttrSWG&sz=w800",
-      "caption": "中度課程：個人成長：團體合作：風火輪",
+      "caption": "團體合作：風火輪",
       "order": 1005,
       "published": true
     }
